@@ -50,6 +50,7 @@ class Controller(object):
                 self.view.display_input_n_dialog()
                 n = input()
                 if n.isnumeric():
+                    self.model.clear_tables()
                     self.model.insert_random_purchases(int(n))
                 else:
                     self.view.display_error_dialog()
